@@ -1,18 +1,26 @@
-import { Outlet } from "react-router-dom";
 import MovieDisplay from "../common/MovieDisplay";
 import NavBar from "../common/Nav";
 
+
+// movieList = [
+//   "Squid Game",
+//   "House of dragon",
+//   "Game of thrones",
+//   "Suits",
+//   "Prison Break",
+// ]
 const TvShows = () => {
 
   return (
     <div>
-      <Outlet />
       <NavBar />
-      <MovieDisplay movieName = "Squid game" />
-      <MovieDisplay movieName = "Game of Thrones" />
-      <MovieDisplay movieName = "Prison Break" />
-      <MovieDisplay movieName = "Merlin" />
-      <MovieDisplay movieName = "Suits" />
+      <MovieDisplay movieName = "Squid Game" />
+    <MovieDisplay movieName = "Game of thrones" />  
+    <MovieDisplay movieName = "Suits" /> 
+    <MovieDisplay movieName = "Merlin" />
+      {/* {movieList.map((movieTitle) => (
+        <MovieDisplay movieName={movie} />
+      ))}; */}
   </div>
   );
 };
