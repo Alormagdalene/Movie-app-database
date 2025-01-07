@@ -13,7 +13,7 @@ const movieList= [
 ];
 const MovieDisplaySection = () => {
   return (
-    <div className='flex items-center justify-center max-w- flex-wrap gap-16'>
+    <div className=''>
     {movieList.map((movieTitle) => (<MovieDisplay movieName = {movieTitle} />))};
     </div>
   );

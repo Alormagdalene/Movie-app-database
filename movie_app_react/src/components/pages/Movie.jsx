@@ -14,16 +14,16 @@ const Movie = () => {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-wrap gap-6 justify-center items-center mt-5 w-[100%] ">
+      <div className="flex flex-wrap gap-6 max-w-3/5 justify-round mt-5 px-4 py-2 text-white font-sans">
         {movies.length > 0 ? (
-          movies.map((movie, id) => (
-            <div key={movie.id} className="movie-card">
+          movies.map((movie) => (
+            <div key={movie.imbdID}>
               <img src={movie.Poster}
                 alt={movie.Title}
               />
-              <h3 className="text-justify text-2xl text-slate-200">{movie.Title}</h3>
-              <h3>{movie.Plot}</h3>
-              <p>Year: {movie.Year}</p>
+              <h3 className="text-left font-bold text-slate-200">{movie.Title}</h3>
+              <h3>{movie.overview}</h3>
+              <p>Year: <span className="text-green-700 font-extrabold">{movie.Year}</span></p>
               <p>IMBD {movie.imbdRtating}</p>
               
             </div>

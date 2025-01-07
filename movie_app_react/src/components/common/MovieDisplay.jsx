@@ -9,7 +9,7 @@ const MovieDisplay = (props) => {
   if (error) return <p>Something is wrong, Be patient while we fix it</p>;
 
   return movieData ? (
-      <div className='flex flex-row justify-around py-6'>
+      <div className='flex flex-wrap justify-center items-center py-6'>
           <span className="">{movieData.Poster && movieData.Title ? (
               <img
                   src={movieData.Poster}
