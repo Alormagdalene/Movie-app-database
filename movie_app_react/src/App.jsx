@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <div className="flex flex-wrap bg-cover bg-black opacity bg-[url('./assets/images/movie.jpg')]">
+    <div className="flex flex-wrap bg-cover bg-[url('./assets/images/movie.jpg')] bg-black bg-opacity-80 bg-blend-darken">
     <QueryClientProvider client = {queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>

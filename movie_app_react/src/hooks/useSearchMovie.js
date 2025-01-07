@@ -20,4 +20,4 @@ function useSearchMovie (movieTitle) {
 
 
 
-export default useSearchMovie
+export default useSearchMovie;
