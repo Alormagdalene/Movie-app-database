@@ -17,10 +17,6 @@ const SearchBar = () => {
     setQuery(formData.search);
     navigate("/movie"); // Redirect to the Movie page
 
-
-  const onSubmit = (formData) => {
-    setQuery(formData.search);
-
   };
 
   useEffect(() => {
@@ -45,6 +41,5 @@ const SearchBar = () => {
       </form>
     </div>
   )};
-};
 
 export default SearchBar;

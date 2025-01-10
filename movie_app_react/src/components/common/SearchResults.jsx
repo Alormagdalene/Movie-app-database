@@ -1,9 +1,9 @@
 import useSearchStore from "../../store/useSearchStore";
 
 const SearchResults = () => {
-  const { searchResults } = useSearchStore(state => state);
-  console.log("Search Results:", searchResults);
+  const { searchResults } = useSearchStore((state) => state);
 
+  // Safely access movies array
   const movies = searchResults?.Search || [];
 
   return (
@@ -18,17 +18,19 @@ const SearchResults = () => {
               >
                 <img
                   className="w-full h-64 object-cover"
-                  src={movie.Poster}
+                  src={movie.Poster !== "N/A" ? movie.Poster : "/placeholder-image.png"} // Fallback for missing poster
                   alt={movie.Title}
                 />
                 <div className="px-4 py-2">
                   <h3 className="text-xl font-bold text-slate-200 mb-2">{movie.Title}</h3>
-                  <p className="text-sm text-gray-400 mb-2">{movie.Plot}</p>
+                  <p className="text-sm text-gray-400 mb-2">
+                    {movie.Plot || "Plot information not available."}
+                  </p>
                   <p className="text-sm">
                     Year: <span className="text-green-700 font-extrabold">{movie.Year}</span>
                   </p>
                   <p className="text-sm">
-                    IMDB Rating: {movie.imbdrating || "N/A"}
+                    IMDB Rating: <span>{movie.imdbRating || "N/A"}</span>
                   </p>
                 </div>
               </div>

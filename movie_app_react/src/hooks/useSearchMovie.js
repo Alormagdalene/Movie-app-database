@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { API_BASE } from "../config/tmdbconfig";
 import { useQuery } from "@tanstack/react-query";
 
 function useSearchMovie(movieTitle) {
