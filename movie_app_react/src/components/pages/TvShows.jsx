@@ -2,26 +2,30 @@ import MovieDisplay from "../common/MovieDisplay";
 import NavBar from "../common/Nav";
 
 
-// movieList = [
-//   "Squid Game",
-//   "House of dragon",
-//   "Game of thrones",
-//   "Suits",
-//   "Prison Break",
-// ]
+const movieList = [
+  "Squid Game",
+  "House of the dragon",
+  "Game of thrones",
+  "Suits",
+  "Prison Break",
+  "Merlin",
+  "legend of the seeker",
+  "Monk",
+  "Vikings",
+  "Jack Ryan",
+  "Desperate housewives",
+  "devious maids",
+];
 const TvShows = () => {
 
   return (
-    <div>
-      <NavBar />
-      <MovieDisplay movieName = "Squid Game" />
-    <MovieDisplay movieName = "Game of thrones" />  
-    <MovieDisplay movieName = "Suits" /> 
-    <MovieDisplay movieName = "Merlin" />
-      {/* {movieList.map((movieTitle) => (
-        <MovieDisplay movieName={movie} />
-      ))}; */}
+   <> <NavBar />
+   <div className="flex flex-wrap">
+      {movieList.map((movieTitle) => (
+        <MovieDisplay movieName={movieTitle} />
+      ))};
   </div>
+  </>
   );
 };
 
