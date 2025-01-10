@@ -52,10 +52,10 @@ const NavBar = () => {
           <Link to="/tvShows" className="text-white hover:text-green-500">
             TV Shows
           </Link>
-        </div>
-        <SearchBar />
-        
+        </div> 
+      <SearchBar />
       </nav>
+      
     </div>
   );
 };

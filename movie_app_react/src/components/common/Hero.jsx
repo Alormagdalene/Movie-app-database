@@ -1,4 +1,3 @@
-// Hero.jsx
 import React from "react";
 import MovieDisplay from "./MovieDisplay";
 import useMovieData from "../../hooks/useMovieData";
@@ -24,7 +23,7 @@ const Hero = ({ movieName }) => {
         {/* Movie Details */}
         <div className="flex-grow">
           <div className="mt-4">
-            <h5 className="text-xl font-semibold text-gray-200">Plot Summary:</h5>
+            <h5 className="text-xl font-semibold text-gray-200"></h5>
             <p className="text-gray-400">{movieData.Plot || "No plot available."}</p>
           </div>
           <div className="mt-4">

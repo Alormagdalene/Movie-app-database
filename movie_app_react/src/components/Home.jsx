@@ -4,6 +4,7 @@ import MovieDisplaySection from './common/MovieDisplaySection';
 import NavBar from './common/Nav';
 import { useState } from 'react';
 
+
 const Home = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
 

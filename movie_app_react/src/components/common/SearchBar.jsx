@@ -10,11 +10,17 @@ const SearchBar = () => {
   const [query, setQuery] = useState("");
   const { isLoading, error, data } = useSearchMovie(query);
   const setSearchResults = useSearchStore((state) => state.setSearchResults);
+
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
     setQuery(formData.search);
     navigate("/movie"); // Redirect to the Movie page
+
+
+  const onSubmit = (formData) => {
+    setQuery(formData.search);
+
   };
 
   useEffect(() => {
@@ -38,7 +44,7 @@ const SearchBar = () => {
         </button>
       </form>
     </div>
-  );
+  )};
 };
 
 export default SearchBar;
